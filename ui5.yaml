@@ -1,0 +1,7 @@
+specVersion: '2.3'
+metadata:
+  name: MyApp
+type: application
+framework:
+  name: SAPUI5
+  version: "1.90.0"
