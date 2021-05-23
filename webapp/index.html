@@ -11,16 +11,18 @@
         data-sap-ui-theme="sap_bluecrystal"
         data-sap-ui-libs="sap.m"
         data-sap-ui-compatVersion="edge"
-        data-sap-ui-preload="async">
+        data-sap-ui-preload="async"
+        data-sap-ui-resourceroots='{
+            "opensap.myapp" : "./"
+            }'>
     </script>
 
 
     <script>
         sap.ui.getCore().attachInit(function () {
-            var oImage = new sap.m.Image({
-                src: "https://media.istockphoto.com/vectors/earth-globe-isolated-on-white-background-world-map-earth-icon-clean-vector-id1146253100"
+            sap.ui.xmlview({
+                viewName : "opensap.myapp.view.App"
             }).placeAt("content");
-            oImage.setHeight("400px");
         });
     </script>
 

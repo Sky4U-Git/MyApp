@@ -1,0 +1,14 @@
+<mvc:View
+    displayBlock="true"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+    <Carousel>
+        <pages>
+            <Image src = "https://media.istockphoto.com/vectors/earth-globe-isolated-on-white-background-world-map-earth-icon-clean-vector-id1146253100"
+                   height = "400px"/>
+            <Image src = "https://previews.123rf.com/images/1xpert/1xpert1504/1xpert150400297/39057635-earth-globe-elements-of-this-image-furnished.jpg"
+                   height = "400px"/>
+        </pages>
+    </Carousel>
+
+</mvc:View>
