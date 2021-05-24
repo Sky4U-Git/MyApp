@@ -3,20 +3,55 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
     controllerName="opensap.myapp.controller.App">
-    <Carousel class="myAppcrsl">
-        <pages>
-            <Image src = "https://media.istockphoto.com/vectors/earth-globe-isolated-on-white-background-world-map-earth-icon-clean-vector-id1146253100"
-             height = "400px"/>
-            <Image src = "https://previews.123rf.com/images/1xpert/1xpert1504/1xpert150400297/39057635-earth-globe-elements-of-this-image-furnished.jpg"
-                   height = "400px"/>
-        </pages>
-    </Carousel>
-    <Button text = "{i18n>showHelloButtonText}"
-            press = "onShowHello" />
-    <Input
-		value="{helloPanel>/recipient/name}"
-		description="Hello {helloPanel>/recipient/name}"
-		valueLiveUpdate="true"
-		width="60%"/>
-   
+    <App>
+		<pages>
+			<Page title="{i18n>pageTitle}">
+				<content>
+					<IconTabBar
+						id="idTopLevelIconTabBar">
+						<items>
+							<IconTabFilter id="start" text="{i18n>gettingStartedFilter}">
+
+                                <Carousel class="myAppcrsl">
+                                    <pages>
+                                        <Image src = "https://media.istockphoto.com/vectors/earth-globe-isolated-on-white-background-world-map-earth-icon-clean-vector-id1146253100"
+                                        height = "400px"/>
+                                        <Image src = "https://previews.123rf.com/images/1xpert/1xpert1504/1xpert150400297/39057635-earth-globe-elements-of-this-image-furnished.jpg"
+                                            height = "400px"/>
+                                    </pages>
+                                </Carousel>
+                                <Button text = "{i18n>showHelloButtonText}"
+                                        press = "onShowHello" />
+                                <Input
+                                    value="{helloPanel>/recipient/name}"
+                                    description="Hello {helloPanel>/recipient/name}"
+                                    valueLiveUpdate="true"
+                                    width="60%"/>
+   							</IconTabFilter>
+                            <IconTabFilter id="layouts" text="{i18n>layoutFilter}">
+                                <MessageStrip
+									type="Information"
+									showIcon="true"
+									text="Here's a Form Layout inside an Icon Tab Bar. The labels on th right hand-side are aligned to the right, while the input fields are aligned to the left.
+                                    The icons of 'Publish' and 'save Dreaft' button are taken from UI5 icon library. You can find them in the icon explorer by their names 'save' and 'outbox'.
+                                    Finally, please note the usage of predefined margins to create a space below this MessageStrip control and above the Toolbar control."/>
+                                <Toolbar>
+                                    <ToolbarSpacer/>
+                                    <Button
+										text="{i18n>layoutPublishButton}"
+										type="Accept"
+                                        icon="sap-icon://outbox"/>
+									<Button
+										text="{i18n>layoutDraftButton}"
+                                        type="Emphasized"
+                                        icon="sap-icon://save"/>
+                                </Toolbar>
+                            </IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
+			</Page>
+		</pages>
+	</App>
+
 </mvc:View>
