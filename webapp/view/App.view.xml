@@ -11,7 +11,7 @@
                    height = "400px"/>
         </pages>
     </Carousel>
-    <Button text = "Say Hello" 
+    <Button text = "{i18n>showHelloButtonText}"
             press = "onShowHello" />
     <Input
 		value="{helloPanel>/recipient/name}"
